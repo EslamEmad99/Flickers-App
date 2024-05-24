@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.main.movies.MoviesFragment">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/layout_main_toolbar" />
+
+    <include
+        android:id="@+id/layout_search"
+        layout="@layout/layout_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_12sdp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_home_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_home_data" />
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -8,6 +8,6 @@
     <string name="un_auth">Your account may have been logged out.</string>
     <string name="block">Your account has been banned by the administration. In the event of an error, please contact the administration</string>
     <string name="text_ok">OK</string>
-    <string name="search_for_a_movie">Search for a movie...</string>
+    <string name="search_for_a_movie">Search for a movie…</string>
     <string name="rating">Rating :</string>
 </resources>
