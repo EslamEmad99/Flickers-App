@@ -1,0 +1,24 @@
+plugins {
+    id 'java-library'
+    alias libs.plugins.kotlinJVM
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+dependencies {
+    // Coroutines for asynchronous
+    implementation libs.kotlinx.coroutines.core
+    implementation libs.kotlinx.coroutines.android
+    implementation libs.retrofit2.kotlin.coroutines.adapter
+
+    // Moshi for remote models
+    implementation libs.moshi.kotlin
+
+    implementation libs.dagger
+
+    //Gson
+    implementation libs.gson
+}

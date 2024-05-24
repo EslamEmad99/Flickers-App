@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="no_internet_connection">لا يوجد اتصال بالإنترنت</string>
+    <string name="something_went_wrong">هناك شئ خاطئ، يرجى المحاولة فى وقت لاحق</string>
+    <string name="continue_browsing_as_a_visitor">استمر في التصفح كزائر</string>
+    <string name="not_auth">أنت لم تسجل دخولك بعد. تسجيل الدخول أو الاستمرار في التصفح كزائر</string>
+    <string name="text_alert">تنبية</string>
+    <string name="un_auth">تم تسجيل الخروج من حسابك.</string>
+    <string name="block">تم حظر حسابك من قبل الإدارة. في حالة وجود خطأ ما برجاء التواصل مع الإدارة.</string>
+    <string name="text_ok">حسنا</string>
+    <string name="search_for_a_movie">ابحث عن فيلم...</string>
+    <string name="rating">التقييم :</string>
+</resources>

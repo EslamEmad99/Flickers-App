@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_12sdp"
+    android:layout_marginVertical="@dimen/_3sdp"
+    app:cardCornerRadius="@dimen/_12sdp"
+    app:cardElevation="@dimen/_1sdp"
+    app:strokeColor="@color/stroke_color"
+    app:strokeWidth="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_12sdp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_movie_title"
+            style="@style/tv_text_semi_header"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Movie Title" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_movie_genres"
+            style="@style/tv_text_normal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_movie_title"
+            tools:text="Movie genres" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_movie_rating_title"
+            style="@style/tv_text_secondary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rating"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_movie_genres" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_movie_rating_value"
+            style="@style/tv_text_normal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:textAlignment="viewStart"
+            app:layout_constraintStart_toEndOf="@id/tv_movie_rating_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_movie_genres"
+            tools:text="4.57" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_2sdp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_movie_rating_value"
+            app:layout_constraintStart_toEndOf="@id/tv_movie_rating_value"
+            app:layout_constraintTop_toTopOf="@id/tv_movie_rating_value"
+            app:srcCompat="@drawable/ic_star" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

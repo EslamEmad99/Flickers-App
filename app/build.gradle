@@ -1,0 +1,104 @@
+plugins {
+    alias libs.plugins.androidApplication
+    alias libs.plugins.kotlinAndroid
+    id 'kotlin-kapt'
+    alias libs.plugins.hilt
+    id 'androidx.navigation.safeargs.kotlin'
+}
+
+android {
+    namespace 'com.eslam.flickers_app'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.eslam.flickers_app"
+        minSdk 24
+        targetSdk 33
+        versionCode libs.versions.versionCode.get().toInteger()
+        versionName libs.versions.versionName.get()
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary true
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildFeatures {
+        viewBinding true
+        dataBinding true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+
+    flavorDimensions.add("environment")
+    productFlavors {
+        create("stg") {
+            dimension = "environment"
+        }
+        create("live") {
+            dimension = "environment"
+        }
+    }
+}
+
+dependencies {
+    implementation project(':data')
+    implementation project(':domain')
+
+    implementation libs.androidx.core.ktx
+    implementation libs.androidx.appcompat
+    implementation libs.material
+    implementation libs.androidx.constraintlayout
+    implementation libs.androidx.fragment.ktx
+    implementation libs.androidx.lifecycle.runtime.ktx
+    implementation libs.material
+
+    // Coil for image loading
+    implementation libs.coil
+
+    // for the view and life cycle
+    implementation libs.androidx.lifecycle.livedata.ktx
+    implementation libs.androidx.lifecycle.viewmodel.ktx
+
+    // navigation component
+    implementation libs.androidx.navigation.fragment.ktx
+    implementation libs.androidx.navigation.ui.ktx
+
+    // Hilt for dependency injection
+    implementation libs.hilt.android
+    implementation libs.androidx.swiperefreshlayout
+    kapt libs.hilt.compiler
+
+    // for different screen sizes
+    implementation libs.sdp.android
+    implementation libs.ssp.android
+
+    // Coroutines for asynchronous
+    implementation libs.kotlinx.coroutines.core
+    implementation libs.kotlinx.coroutines.android
+    implementation libs.retrofit2.kotlin.coroutines.adapter
+
+    // custom toast
+    implementation libs.toasty
+
+    // custom dialog
+    implementation libs.awesomedialog
+
+    // Lottie
+    implementation libs.lottie
+}
+
+kapt {
+    correctErrorTypes = true
+}
