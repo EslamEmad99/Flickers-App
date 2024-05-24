@@ -1,8 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.main.movie_details.MovieDetailsFragment">
 
-</FrameLayout>
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/layout_main_toolbar" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_movie_name_title"
+        style="@style/tv_text_secondary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_12sdp"
+        android:text="@string/movie_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_movie_name_value"
+        style="@style/tv_text_normal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_2sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:textAlignment="viewStart"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_movie_name_title"
+        app:layout_constraintTop_toTopOf="@+id/tv_movie_name_title" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_movie_year_title"
+        style="@style/tv_text_secondary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:text="@string/movie_year"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_movie_name_value" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_movie_year_value"
+        style="@style/tv_text_normal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_2sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:textAlignment="viewStart"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_movie_year_title"
+        app:layout_constraintTop_toTopOf="@+id/tv_movie_year_title" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_movie_geners_title"
+        style="@style/tv_text_secondary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:text="@string/movie_geners"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_movie_year_value" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_movie_geners_value"
+        style="@style/tv_text_normal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_2sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:textAlignment="viewStart"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_movie_geners_title"
+        app:layout_constraintTop_toTopOf="@id/tv_movie_geners_title" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_movie_cast_title"
+        style="@style/tv_text_secondary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:text="@string/movie_cast"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_movie_geners_value" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_movie_cast_value"
+        style="@style/tv_text_normal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_2sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:textAlignment="viewStart"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_movie_cast_title"
+        app:layout_constraintTop_toTopOf="@id/tv_movie_cast_title" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/_12sdp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_movie_cast_value"
+        app:spanCount="2"
+        tools:listitem="@layout/item_movie_image" />
+</androidx.constraintlayout.widget.ConstraintLayout>

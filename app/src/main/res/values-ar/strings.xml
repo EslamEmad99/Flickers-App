@@ -10,4 +10,8 @@
     <string name="text_ok">حسنا</string>
     <string name="search_for_a_movie">ابحث عن فيلم…</string>
     <string name="rating">التقييم :</string>
+    <string name="movie_title">اسم الفيلم:</string>
+    <string name="movie_year">سنة الفيلم:</string>
+    <string name="movie_geners">نوع الفيلم:</string>
+    <string name="movie_cast">طاقم الفيلم:</string>
 </resources>

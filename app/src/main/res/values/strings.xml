@@ -10,4 +10,8 @@
     <string name="text_ok">OK</string>
     <string name="search_for_a_movie">Search for a movie…</string>
     <string name="rating">Rating :</string>
+    <string name="movie_title">Movie title:</string>
+    <string name="movie_year">Movie year:</string>
+    <string name="movie_geners">Movie geners:</string>
+    <string name="movie_cast">Movie cast:</string>
 </resources>
