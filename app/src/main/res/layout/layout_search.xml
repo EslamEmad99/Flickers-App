@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:cardBackgroundColor="@color/background_color"
@@ -29,10 +30,12 @@
             android:background="@null"
             android:hint="@string/search_for_a_movie"
             android:imeOptions="actionSearch"
+            android:paddingEnd="@dimen/_12sdp"
             android:inputType="text"
             android:paddingVertical="@dimen/_12sdp"
             android:textColor="@color/text_secondary_color"
             android:textColorHint="@color/edit_text_hint_color"
-            android:textSize="@dimen/_10ssp" />
+            android:textSize="@dimen/_10ssp"
+            tools:ignore="RtlSymmetry" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 </com.google.android.material.card.MaterialCardView>

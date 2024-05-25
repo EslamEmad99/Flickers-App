@@ -7,9 +7,6 @@ import android.graphics.drawable.ColorDrawable
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.view.Window
-import android.view.animation.Animation
-import android.view.animation.AnimationUtils
-import com.eslam.flickers_app.R
 import com.eslam.flickers_app.databinding.LayoutProgressBinding
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -18,8 +15,6 @@ import javax.inject.Singleton
 class ProgressUtil @Inject constructor(private val context: Context) {
 
     private var dialog: AlertDialog? = null
-
-    //    private lateinit var animBell: Animation
     private lateinit var binding: LayoutProgressBinding
 
     init {
@@ -27,7 +22,6 @@ class ProgressUtil @Inject constructor(private val context: Context) {
     }
 
     private fun init() {
-//        animBell = AnimationUtils.loadAnimation(context, R.anim.anim_bell)
         binding = LayoutProgressBinding.inflate(LayoutInflater.from(context))
 
         dialog = AlertDialog.Builder(context).create()
@@ -56,7 +50,6 @@ class ProgressUtil @Inject constructor(private val context: Context) {
     private fun showProgress() {
         if (dialog != null && dialog?.isShowing == false) {
             dialog?.show()
-//            binding.ivLogo.startAnimation(animBell)
         }
     }
 
@@ -65,9 +58,5 @@ class ProgressUtil @Inject constructor(private val context: Context) {
             dialog?.cancel()
             dialog?.hide()
         }
-    }
-
-    fun isLoading(): Boolean {
-        return dialog?.isShowing == true
     }
 }

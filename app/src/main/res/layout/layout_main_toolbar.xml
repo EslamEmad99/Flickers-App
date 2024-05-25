@@ -24,7 +24,7 @@
         android:paddingHorizontal="@dimen/_36sdp"
         android:singleLine="true"
         android:textAlignment="center"
-        android:textColor="@color/text_main_color"
+        android:textColor="@color/white"
         android:textSize="@dimen/_11ssp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

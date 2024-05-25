@@ -94,9 +94,6 @@ dependencies {
 
     // custom dialog
     implementation libs.awesomedialog
-
-    // Lottie
-    implementation libs.lottie
 }
 
 kapt {

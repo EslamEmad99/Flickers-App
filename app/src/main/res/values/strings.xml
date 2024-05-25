@@ -14,4 +14,6 @@
     <string name="movie_year">Movie year:</string>
     <string name="movie_geners">Movie geners:</string>
     <string name="movie_cast">Movie cast:</string>
+    <string name="movies">Movies</string>
+    <string name="excuse_me_there_is_no_data">Excuse me! There is no data</string>
 </resources>

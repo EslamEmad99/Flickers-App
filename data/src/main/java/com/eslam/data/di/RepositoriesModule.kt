@@ -1,8 +1,11 @@
 package com.eslam.data.di
 
-import com.eslam.data.data_source.remote.CommonDataSource
-import com.eslam.data.repository.remote.CommonRepositoryImpl
-import com.eslam.domain.repository.remote.CommonRepository
+import com.eslam.data.data_source.local.LocalDataSource
+import com.eslam.data.data_source.remote.MainDataSource
+import com.eslam.data.repository.local.LocalRepositoryImpl
+import com.eslam.data.repository.remote.MainRepositoryImpl
+import com.eslam.domain.repository.local.LocalRepository
+import com.eslam.domain.repository.remote.MainRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -15,6 +18,11 @@ object RepositoriesModule {
 
     @Singleton
     @Provides
-    fun providesCommonRepository(commonDataSource: CommonDataSource): CommonRepository =
-        CommonRepositoryImpl(commonDataSource)
+    fun providesLocalRepository(localDataSource: LocalDataSource): LocalRepository =
+        LocalRepositoryImpl(localDataSource)
+
+    @Singleton
+    @Provides
+    fun providesCommonRepository(mainDataSource: MainDataSource): MainRepository =
+        MainRepositoryImpl(mainDataSource)
 }

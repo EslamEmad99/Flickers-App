@@ -1,6 +1,6 @@
 package com.eslam.data.di
 
-import com.eslam.data.remote.end_points.CommonEndPoints
+import com.eslam.data.remote.end_points.MainEndPoints
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -14,6 +14,6 @@ object EndPointsModules {
 
     @Singleton
     @Provides
-    fun providesCommonEndPoints(retrofit: Retrofit): CommonEndPoints =
-        retrofit.create(CommonEndPoints::class.java)
+    fun providesCommonEndPoints(retrofit: Retrofit): MainEndPoints =
+        retrofit.create(MainEndPoints::class.java)
 }

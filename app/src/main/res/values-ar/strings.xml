@@ -14,4 +14,6 @@
     <string name="movie_year">سنة الفيلم:</string>
     <string name="movie_geners">نوع الفيلم:</string>
     <string name="movie_cast">طاقم الفيلم:</string>
+    <string name="movies">الأفلام</string>
+    <string name="excuse_me_there_is_no_data">عذرا! لا توجد بيانات</string>
 </resources>

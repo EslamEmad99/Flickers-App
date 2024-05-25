@@ -1,6 +1,4 @@
 [versions]
-detektGradlePlugin = "1.23.1"
-ktlint = "11.0.0"
 versionCode = "1"
 versionName = "1.0.0"
 androidGradlePlugin = "7.4.2"
@@ -12,9 +10,7 @@ converterGson = "2.9.0"
 coreKtx = "1.13.1"
 dagger = "2.48.1"
 datastorePreferences = "1.1.1"
-firebaseBom = "33.0.0"
 fragmentKtx = "1.7.1"
-glide = "4.15.1"
 coil = "2.5.0"
 gson = "2.10.1"
 hiltAndroid = "2.48.1"
@@ -31,7 +27,6 @@ sdpAndroid = "1.1.0"
 sspAndroid = "1.1.0"
 swiperefreshlayout = "1.1.0"
 toasty = "1.5.2"
-lottie = "6.4.0"
 
 [libraries]
 androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
@@ -50,7 +45,6 @@ awesomedialog = { module = "com.github.chnouman:AwesomeDialog", version.ref = "a
 converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "converterGson" }
 converter-moshi = { module = "com.squareup.retrofit2:converter-moshi", version.ref = "converterGson" }
 dagger = { module = "com.google.dagger:dagger", version.ref = "dagger" }
-lottie = { module = "com.airbnb.android:lottie", version.ref = "lottie" }
 coil = { module = "io.coil-kt:coil", version.ref = "coil" }
 gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroid" }
