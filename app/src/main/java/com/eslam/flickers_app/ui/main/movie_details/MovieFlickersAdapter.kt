@@ -50,6 +50,11 @@ class MovieFlickersAdapter() : RecyclerView.Adapter<MovieFlickersAdapter.MyViewH
             }
         }
 
+        /**
+         * This extension function generates the full URL for a Flickr image based on the Flicker object's properties.
+         * It constructs the URL using the farm, server, id, and secret attributes of the Flicker object,
+         * following the standard format for accessing images on Flickr's servers.
+         * **/
         private fun Flicker.getImageUrl() =
             "https://farm${this.farm}.static.flickr.com/${this.server}/${this.id}_${this.secret}.jpg"
     }

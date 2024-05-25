@@ -33,6 +33,7 @@ class MoviesAdapter(
             binding.apply {
                 tvMovieTitle.text = movie.title
                 tvMovieTitle.isSelected = true
+                // Showing movie generes in a TextView separated by comma
                 tvMovieGenres.text = ""
                 movie.genres.forEachIndexed { index, genre ->
                     tvMovieGenres.append("$genre ${if (index == movie.genres.size - 1) "" else ", "}")

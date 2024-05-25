@@ -13,6 +13,11 @@ import com.eslam.flickers_app.ui.base.BaseFragment
 import com.eslam.flickers_app.ui.base.applyCommonSideEffects
 import dagger.hilt.android.AndroidEntryPoint
 
+/**
+ * MovieDetailsFragment is responsible for displaying the details of a selected movie.
+ * This fragment is initialized with the movie data passed as arguments and displays movie details such as title, year, genres, and cast.
+ * It also initializes a RecyclerView to display related photos (flickers) fetched from a ViewModel.
+ * **/
 @AndroidEntryPoint
 class MovieDetailsFragment :
     BaseFragment<FragmentMovieDetailsBinding>(FragmentMovieDetailsBinding::inflate) {

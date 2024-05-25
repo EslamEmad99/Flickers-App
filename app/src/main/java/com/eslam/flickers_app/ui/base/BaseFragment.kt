@@ -22,6 +22,11 @@ import com.eslam.flickers_app.util.showToast
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
+/**
+ * BaseFragment is an abstract base class for all fragments in the application,
+ * providing common functionality and lifecycle handling for view binding, observer management, and network actions.
+ * It uses generics to work with any type of ViewBinding, and implements NetworkExtensionsActions for handling network-related UI updates.
+ * **/
 abstract class BaseFragment<VB : ViewBinding>(private val inflate: Inflate<VB>) :
     Fragment(),
     NetworkExtensionsActions {

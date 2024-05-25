@@ -1,3 +1,8 @@
+/**
+ * Using a version catalog allows us to centralize dependency management.
+ * This makes it easier to update dependency versions in one place, ensuring consistency across the project.
+ * It also improves readability and maintainability of our build scripts.
+ * **/
 plugins {
     alias libs.plugins.androidLibrary
     alias libs.plugins.kotlinAndroid
@@ -30,6 +35,12 @@ android {
         jvmTarget = '17'
     }
 
+    /**
+     * Using product flavors to create two different flavors (STG - LIVE)
+     * to simulate the REAL-WORLD project
+     * LIVE for the production version on app store
+     * STG for testing
+     */
     flavorDimensions.add("environment")
     productFlavors {
         create("stg") {

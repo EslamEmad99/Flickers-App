@@ -19,6 +19,12 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import javax.inject.Inject
 
+/**
+ * BaseViewModel is a ViewModel class that provides common functionality and use cases
+ * for managing user authentication, user data, and application settings.
+ * This ViewModel is injected with various use cases to handle different aspects
+ * of user state and application configuration.
+ * **/
 @HiltViewModel
 class BaseViewModel @Inject constructor(
     private val getIsLoginUseCase: GetIsLoginUseCase,
