@@ -90,4 +90,4 @@ We welcome contributions! Please read the [CONTRIBUTING](CONTRIBUTING.md) guidel
 For any questions or feedback, feel free to reach out to the project maintainer:
 
 - **Name:** Eslam Emad
-- **Email:** [youremail@example.com](mailto:eslamemad903@gmail.com)
+- **Email:** [eslamemad903@gmail.com](mailto:eslamemad903@gmail.com)
