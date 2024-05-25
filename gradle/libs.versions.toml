@@ -28,6 +28,8 @@ sdpAndroid = "1.1.0"
 sspAndroid = "1.1.0"
 swiperefreshlayout = "1.1.0"
 toasty = "1.5.2"
+mockito = "4.3.1"
+junit = "4.13.2"
 
 [libraries]
 androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
@@ -63,6 +65,10 @@ sdp-android = { module = "com.intuit.sdp:sdp-android", version.ref = "sdpAndroid
 slider-gallery-zoom = { module = "com.github.3lyan:slider-gallery-zoom", version.ref = "sliderGalleryZoom" }
 ssp-android = { module = "com.intuit.ssp:ssp-android", version.ref = "sspAndroid" }
 toasty = { module = "com.github.GrenderG:Toasty", version.ref = "toasty" }
+kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinxCoroutinesCore" }
+mockito-core = { module = "org.mockito:mockito-core", version.ref = "mockito" }
+junit = { module = "junit:junit", version.ref = "junit" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "androidGradlePlugin" }
