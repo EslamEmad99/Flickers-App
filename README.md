@@ -42,7 +42,6 @@ Using a version catalog helps to manage dependencies in a centralized manner, ma
 - Hilt for dependency injection
 - Jetpack components like LiveData, ViewModel, Navigation
 - Retrofit for network calls
-- Room for local database
 - Fastlane for continuous deployment
 
 ## Installation
