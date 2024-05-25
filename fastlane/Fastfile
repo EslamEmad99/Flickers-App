@@ -1,0 +1,46 @@
+default_platform(:android)
+
+APP_CENTER_API_TOKEN = "48ebbdb9ce760b5dc6b96fda859ba907b932e717"
+APP_CENTER_OWNER_NAME = "EslamEmad"
+APP_CENTER_APP_NAME = "Flickers-App"
+
+platform :android do
+  lane :publish_test do
+    deploy_to_staging
+    deploy_to_live
+  end
+
+  lane :deploy_to_staging do
+    gradle(task: "clean")
+    gradle(
+      task: "assembleStg",
+      build_type: "Release"
+    )
+    appcenter_upload(
+      api_token: APP_CENTER_API_TOKEN,
+      owner_name: APP_CENTER_OWNER_NAME,
+      owner_type: "organization",
+      app_name: APP_CENTER_APP_NAME,
+      destinations: "STG",
+      file: "app/build/outputs/apk/stg/release/app-stg-release-unsigned.apk",
+      notify_testers: true
+    )
+  end
+
+  lane :deploy_to_live do
+    gradle(
+      task: "assembleLive",
+      build_type: "Release"
+    )
+    appcenter_upload(
+      api_token: APP_CENTER_API_TOKEN,
+      owner_name: APP_CENTER_OWNER_NAME,
+      owner_type: "organization",
+      app_name: APP_CENTER_APP_NAME,
+      destinations: "LIVE",
+      file: "app/build/outputs/apk/live/release/app-live-release-unsigned.apk",
+      notify_testers: true
+    )
+  end
+
+end
