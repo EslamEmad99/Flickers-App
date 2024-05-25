@@ -7,5 +7,6 @@ import javax.inject.Inject
 class MainRemoteDataSourceImpl @Inject constructor(
     private val mainEndPoints: MainEndPoints
 ) : MainDataSource {
-
+    override suspend fun getMovieFlickers(movieTitle: String) =
+        mainEndPoints.getMovieFlickers(movieTitle = movieTitle)
 }

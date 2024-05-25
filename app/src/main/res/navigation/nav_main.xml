@@ -24,5 +24,9 @@
         android:id="@+id/movieDetailsFragment"
         android:name="com.eslam.flickers_app.ui.main.movie_details.MovieDetailsFragment"
         android:label="fragment_movie_details"
-        tools:layout="@layout/fragment_movie_details" />
+        tools:layout="@layout/fragment_movie_details">
+        <argument
+            android:name="movie"
+            app:argType="string" />
+    </fragment>
 </navigation>

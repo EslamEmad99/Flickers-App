@@ -94,6 +94,8 @@ dependencies {
 
     // custom dialog
     implementation libs.awesomedialog
+
+    implementation libs.slider.gallery.zoom
 }
 
 kapt {

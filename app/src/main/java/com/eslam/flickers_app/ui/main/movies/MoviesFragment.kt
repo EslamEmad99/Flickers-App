@@ -5,9 +5,11 @@ import android.view.inputmethod.InputMethodManager
 import androidx.core.view.isVisible
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.eslam.domain.model.Movie
 import com.eslam.domain.model.YearMovies
 import com.eslam.domain.util.DataState
+import com.eslam.domain.util.toJson
 import com.eslam.flickers_app.R
 import com.eslam.flickers_app.databinding.FragmentMoviesBinding
 import com.eslam.flickers_app.ui.base.BaseFragment
@@ -25,7 +27,10 @@ class MoviesFragment : BaseFragment<FragmentMoviesBinding>(FragmentMoviesBinding
     }
 
     private fun navigateToMovieDetailsFragment(movie: Movie) {
-
+        val action = MoviesFragmentDirections.actionMoviesFragmentToMovieDetailsFragment(
+            movie = movie.toJson()
+        )
+        findNavController().navigate(action)
     }
 
     override fun afterCreateView() {

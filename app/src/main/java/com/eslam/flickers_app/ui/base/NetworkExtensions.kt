@@ -1,19 +1,10 @@
 package com.eslam.flickers_app.ui.base
 
-import com.eslam.flickers_app.R
-import com.eslam.flickers_app.util.ResponseStatus.ACTIVE
-import com.eslam.flickers_app.util.ResponseStatus.BLOCK
-import com.eslam.flickers_app.util.ResponseStatus.EXCEPTION
-import com.eslam.flickers_app.util.ResponseStatus.FAILED
-import com.eslam.flickers_app.util.ResponseStatus.NEED_ACTIVATE
-import com.eslam.flickers_app.util.ResponseStatus.NEED_APPROVAL
-import com.eslam.flickers_app.util.ResponseStatus.NOT_ACTIVE
-import com.eslam.flickers_app.util.ResponseStatus.PENDING
-import com.eslam.flickers_app.util.ResponseStatus.SUCCESS
-import com.eslam.flickers_app.util.ResponseStatus.UN_AUTH
 import com.eslam.domain.exceptions.NetworkExceptions
-import com.eslam.domain.model.base.BaseResponse
+import com.eslam.domain.model.FlickersData
 import com.eslam.domain.util.DataState
+import com.eslam.flickers_app.R
+import com.eslam.flickers_app.util.ResponseStatus.OK
 
 interface NetworkExtensionsActions {
     fun onLoad(showLoading: Boolean) {
@@ -55,41 +46,12 @@ fun <T> DataState<T>.applyCommonSideEffects(
 
         is DataState.Success -> {
             networkExtensionsActions.onLoad(false)
-            val msg = (data as BaseResponse<*>).msg
-            when ((data as BaseResponse<*>).key) {
-                SUCCESS, ACTIVE -> {
-                    if (showSuccessToast) networkExtensionsActions.onShowSuccessToast(msg)
-                    onSuccess(this.data)
-                }
-
-                NEED_ACTIVATE -> {
-                    networkExtensionsActions.authorizationNeedActive(msg)
-                }
-
-                NEED_APPROVAL -> {
-                    networkExtensionsActions.needApproval(msg)
-                }
-
-                UN_AUTH -> {
-                    networkExtensionsActions.authorizationFail()
-                }
-
-                BLOCK -> {
-                    networkExtensionsActions.block()
-                }
-
-                NOT_ACTIVE, PENDING, FAILED, EXCEPTION -> {
-                    if ((data as BaseResponse<*>).key == NOT_ACTIVE && cancelNotActive) {
-                        if (showSuccessToast) networkExtensionsActions.onShowSuccessToast(msg)
-                        onSuccess(this.data)
-                    } else {
-                        networkExtensionsActions.onFail(msg)
-                    }
-                }
-
-                else -> {
-                    networkExtensionsActions.onCommonError(R.string.something_went_wrong)
-                }
+            val msg = (data as FlickersData).message
+            if ((data as FlickersData).stat == OK) {
+                if (showSuccessToast) networkExtensionsActions.onShowSuccessToast(msg)
+                onSuccess(this.data)
+            } else {
+                networkExtensionsActions.onCommonError(R.string.something_went_wrong)
             }
         }
 

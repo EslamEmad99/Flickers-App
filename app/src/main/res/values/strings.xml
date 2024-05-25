@@ -16,4 +16,6 @@
     <string name="movie_cast">Movie cast:</string>
     <string name="movies">Movies</string>
     <string name="excuse_me_there_is_no_data">Excuse me! There is no data</string>
+    <string name="movie_details">Movie details</string>
+    <string name="sorry_there_is_no_flickers_for_this_movie">Sorry there is no flickers for this movie</string>
 </resources>

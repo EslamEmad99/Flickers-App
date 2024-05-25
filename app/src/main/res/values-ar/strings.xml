@@ -16,4 +16,6 @@
     <string name="movie_cast">طاقم الفيلم:</string>
     <string name="movies">الأفلام</string>
     <string name="excuse_me_there_is_no_data">عذرا! لا توجد بيانات</string>
+    <string name="movie_details">تفاصيل الفيلم</string>
+    <string name="sorry_there_is_no_flickers_for_this_movie">آسف ليس هناك وميض لهذا الفيلم</string>
 </resources>

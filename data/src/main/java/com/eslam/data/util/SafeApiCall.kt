@@ -60,9 +60,6 @@ fun <T> handleError(it: Throwable): DataState<T> {
     }
 }
 
-/**
- * BaseResponse() is a generic class which contains most common keys and to check if returning fail from the back-end e.g. not passing the validation
- **/
 private fun convertErrorBody(throwable: HttpException): Exception {
     val errorBody = throwable.response()?.errorBody()?.charStream()
     val response = Gson().fromJson(errorBody, BaseResponse::class.java)

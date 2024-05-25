@@ -12,6 +12,11 @@ object NetworkConstants {
     const val NETWORK_TIMEOUT: Long = 600000000
     const val API_VERSION = "/api/"
     const val TYPE_ANDROID = "android"
+    const val METHOD_NAME = "flickr.photos.search"
+    const val NO_JSON_CALLBACK_VALUE = 1
+    const val JSON = "json"
+    const val FLICKER_API_KEY = "29e46f88ce72ce174b061d3357e9da19"
+    const val PER_PAGE_VALUE = 50
 }
 
 object FailRequestCode {
@@ -31,11 +36,15 @@ object PreferenceConstants {
 }
 
 object CommonRemoteEndPointsNames {
-    const val COUNTRIES = "countries"
-    const val TERMS = "terms"
+    const val REST = "rest"
 }
 
 object CommonRemoteEndPointsParameters {
-    const val METHOD_TYPE = "_method"
-    const val PATCH = "patch"
+    const val TEXT = "text"
+    const val METHOD = "method"
+    const val NO_JSON_CALLBACK = "nojsoncallback"
+    const val FORMAT = "format"
+    const val API_KEY = "api_key"
+    const val PAGE = "page"
+    const val PER_PAGE = "per_page"
 }

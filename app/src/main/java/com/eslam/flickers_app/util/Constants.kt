@@ -5,6 +5,7 @@ object ResponseStatus {
     const val NEED_ACTIVATE = "needActive"
     const val NEED_APPROVAL = "needApproval"
     const val FAILED = "fail"
+    const val OK = "ok"
     const val ACTIVE = "active"
     const val NOT_ACTIVE = "waitingApproval"
     const val BLOCK = "blocked"
