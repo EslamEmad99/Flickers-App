@@ -6,6 +6,7 @@ APP_CENTER_APP_NAME = "Flickers-App"
 
 platform :android do
   lane :publish_test do
+    run_tests
     deploy_to_staging
     deploy_to_live
   end
@@ -43,4 +44,7 @@ platform :android do
     )
   end
 
+  lane :run_tests do
+    gradle(task: "test")
+  end
 end
