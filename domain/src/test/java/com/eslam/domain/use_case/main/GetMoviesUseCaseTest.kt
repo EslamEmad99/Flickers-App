@@ -28,7 +28,6 @@ class GetMoviesUseCaseTest {
     @Test
     fun `test invoke without search query returns all movies grouped by year and sorted`() =
         runTest {
-            println("my_test run1")
             // Given
             val movies = listOf(
                 Movie(listOf("Actor 1"), 2021, listOf("Genre 1"), 5.0f, "Movie A"),
@@ -66,7 +65,6 @@ class GetMoviesUseCaseTest {
     @Test
     fun `test invoke with search query filters and returns movies`() = runTest {
         // Given
-        println("my_test run2")
         val movies = listOf(
             Movie(listOf("Actor 1"), 2021, listOf("Genre 1"), 5.0f, "Movie A"),
             Movie(listOf("Actor 2"), 2022, listOf("Genre 2"), 4.0f, "Movie B"),
