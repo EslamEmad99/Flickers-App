@@ -82,6 +82,12 @@ Feel free to use the app without using Fastlane.
 
 ## Screenshots
 ![Screenshot 1](Screenshots/1.jpeg)
+![Screenshot 2](Screenshots/2.jpeg)
+![Screenshot 3](Screenshots/3.jpeg)
+![Screenshot 4](Screenshots/4.jpeg)
+![Screenshot 5](Screenshots/5.jpeg)
+![Screenshot 6](Screenshots/6.jpeg)
+![Screenshot 7](Screenshots/7.jpeg)
 
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
