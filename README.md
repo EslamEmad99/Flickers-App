@@ -81,6 +81,9 @@ bundle exec fastlane add_plugin appcenter
 Feel free to use the app without using Fastlane.
 
 ## Screenshots
+[![Screenshot 1](Screenshots/thumbnail1.png)](Screenshots/screenshot1.png)
+[![Screenshot 2](Screenshots/thumbnail2.png)](Screenshots/screenshot2.png)
+
 ![Screenshot 1](Screenshots/1.jpeg)
 ![Screenshot 2](Screenshots/2.jpeg)
 ![Screenshot 3](Screenshots/3.jpeg)
