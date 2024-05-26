@@ -82,6 +82,7 @@ Feel free to use the app without using Fastlane.
 
 ## Screenshots
 
+| Screenshot 1 | Screenshot 2 |
 |--------------|--------------|
 | ![Screenshot 1](Screenshots/1.jpeg) | ![Screenshot 1](Screenshots/2.jpeg) |
 | ![Screenshot 1](Screenshots/3.jpeg) | ![Screenshot 1](Screenshots/4.jpeg) |
