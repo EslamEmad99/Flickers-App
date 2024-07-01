@@ -1,6 +1,7 @@
 package com.eslam.flickers_app.ui.main.movies
 
 import android.content.Context
+import android.os.Bundle
 import android.view.inputmethod.InputMethodManager
 import androidx.core.view.isVisible
 import androidx.core.widget.addTextChangedListener
@@ -31,6 +32,15 @@ class MoviesFragment : BaseFragment<FragmentMoviesBinding>(FragmentMoviesBinding
             movie = movie.toJson()
         )
         findNavController().navigate(action)
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        getMovies()
+    }
+
+    private fun getMovies() {
+        viewModel.getMovies()
     }
 
     override fun afterCreateView() {

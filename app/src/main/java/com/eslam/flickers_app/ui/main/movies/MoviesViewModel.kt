@@ -26,12 +26,8 @@ class MoviesViewModel @Inject constructor(
 ) : ViewModel() {
 
     private var _getMoviesResponse =
-        MutableStateFlow<DataState<List<YearMovies>>>(DataState.Loading)
+        MutableStateFlow<DataState<List<YearMovies>>>(DataState.Idle)
     val getMoviesResponse = _getMoviesResponse.asStateFlow()
-
-    init {
-        getMovies()
-    }
 
     fun getMovies(searchQuery: String? = null) {
         viewModelScope.launch {

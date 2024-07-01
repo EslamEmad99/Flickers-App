@@ -14,11 +14,16 @@
 plugins {
     id 'java-library'
     alias libs.plugins.kotlinJVM
+    id 'kotlin-allopen'
 }
 
 java {
     sourceCompatibility = JavaVersion.VERSION_17
     targetCompatibility = JavaVersion.VERSION_17
+}
+
+allOpen {
+    annotation("com.eslam.domain.use_case.util.Mockable") // Define your own annotation
 }
 
 dependencies {
@@ -40,4 +45,5 @@ dependencies {
     testImplementation libs.kotlinx.coroutines.test
     testImplementation libs.mockito.core
     testImplementation libs.junit
+    implementation libs.kotlin.stdlib
 }

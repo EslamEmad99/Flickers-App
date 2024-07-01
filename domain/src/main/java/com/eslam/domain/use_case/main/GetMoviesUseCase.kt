@@ -2,6 +2,7 @@ package com.eslam.domain.use_case.main
 
 import com.eslam.domain.model.YearMovies
 import com.eslam.domain.repository.local.LocalRepository
+import com.eslam.domain.use_case.util.Mockable
 import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
 
@@ -12,6 +13,7 @@ import javax.inject.Inject
  * Use cases promote a clean separation of concerns by keeping the domain logic separate from
  * the presentation layer, making the codebase more modular, reusable, and testable.
  * **/
+@Mockable
 class GetMoviesUseCase @Inject constructor(
     private val localRepository: LocalRepository
 ) {
