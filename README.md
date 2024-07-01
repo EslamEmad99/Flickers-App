@@ -80,6 +80,15 @@ bundle exec fastlane add_plugin appcenter
 ```
 Feel free to use the app without using Fastlane.
 
+## Screenshots
+
+| Screenshot 1 | Screenshot 2 |
+|--------------|--------------|
+| ![Screenshot 1](Screenshots/1.jpeg) | ![Screenshot 1](Screenshots/2.jpeg) |
+| ![Screenshot 1](Screenshots/3.jpeg) | ![Screenshot 1](Screenshots/4.jpeg) |
+| ![Screenshot 1](Screenshots/5.jpeg) | ![Screenshot 1](Screenshots/6.jpeg) |
+| ![Screenshot 1](Screenshots/7.jpeg) |                                     |
+
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
